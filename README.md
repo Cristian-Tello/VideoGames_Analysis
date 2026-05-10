@@ -1,4 +1,4 @@
-# VideoGames_Analysis
+# Data Analytics applied to the global video game market
 
 ## Problem Description
 
