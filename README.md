@@ -125,3 +125,14 @@ PS4 and Xbox One: Modern consoles with room to grow.
 
 Conclusion:
 The market shows a clear generational replacement cycle: older consoles are losing relevance while newer ones (PS4, XOne, 3DS) concentrate the growth potential. For a predictive model towards 2017, it is advisable to focus on these emerging platforms and on the stability of the PC as a complementary market.
+
+<p align="center">
+  <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Critic%20reviews.png" alt="Sample Image">
+</p> 
+
+* Critic Reviews: A stronger positive correlation exists. Games with higher professional ratings tend to sell more, although with some variation. This suggests that expert opinion significantly influences purchasing decisions.
+
+* User Reviews: The correlation with sales is much weaker. While some titles with good user scores achieve high sales, a consistent pattern is not generally observed.
+
+* Conclusion: Professional reviews have a greater impact on the commercial performance of PS4 games, while user reviews reflect individual perceptions more than a direct impact on sales.
+
