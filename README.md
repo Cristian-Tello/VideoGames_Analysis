@@ -32,3 +32,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
 ```
+# Conclusions on data types
+* Columns exhibit inconsistencies in their data types
+- Year_of_Release -> INT
+- User_Score -> FLOAT
+
+* Missing values
+- Name: 16713 = 2 Missing values
+- Year_of_Release: 16446 = 269 Missing values ​​-> 1% of the data is missing
+- Genre: 16713 = 2 Missing values
+- Critic_Score: 8137 = 8578 Missing values ​​-> 50% of the data is missing and should be deleted, but it will be assigned a missing value using NumPy (np.nan)
+- User_Score: 10014 = 6701 Missing values ​​-> 40% of the data is missing
+- Rating: 9949 = 6766 Missing values ​​-> 40% of the data is missing Missing values
+
+* Duplicate values ​​and rows
+
+- Remove 3 columns (#16230, 659, 14244) because they are duplicate columns and do not contribute any value to the data.
