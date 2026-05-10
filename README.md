@@ -136,3 +136,6 @@ The market shows a clear generational replacement cycle: older consoles are losi
 
 * Conclusion: Professional reviews have a greater impact on the commercial performance of PS4 games, while user reviews reflect individual perceptions more than a direct impact on sales.
 
+<p align="center">
+  <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Sales%20by%20Genre.png" alt="Sample Image">
+</p> 
