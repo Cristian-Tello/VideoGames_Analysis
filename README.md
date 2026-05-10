@@ -70,3 +70,7 @@ plt.show()
 The graph shows how the video game industry experienced sustained growth from the 1980s, reaching its peak between 2007 and 2009 with over 1,400 releases annually. 
 
 This boom reflects market consolidation and platform expansion during that period. Subsequently, a decrease in the number of releases is observed, which can be attributed to changes in company strategy, a greater focus on quality over quantity, and the transition to new digital distribution models. Overall, the visualization allows us to understand the evolution of the sector and the factors that have shaped its dynamics over time.
+
+<p align="center">
+  <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Platform%20Sales.png" alt="Sample Image">
+</p>
