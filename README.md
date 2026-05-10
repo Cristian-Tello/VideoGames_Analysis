@@ -9,3 +9,17 @@ The challenge is to analyze this data to discover behavioral patterns and key va
 The analysis is presented in a simulated context: December 2016, with the task of forecasting 2017 sales. However, the project's main value lies in the practical experience of working with data, applicable to any time frame.
 
 The dataset's rating column, which reflects the age classification assigned by the ESRB, adds an additional dimension to the study, allowing for an evaluation of how content restrictions can impact the acceptance and success of video games.
+
+
+## Data
+1. Name	
+2. Platform	
+3. Year_of_Release	
+4. Genre	
+5. NA_sales	= North American sales in millions of US dollars
+6. EU_sales	= European sales in millions of US dollars
+7. JP_sales	= Japan sales in millions of US dollars
+8. Other_sales	= Sales in other countries in millions of US dollars
+9. Critic_Score = maximum of 100	
+10. User_Score	= maximum of 10
+11. Rating = ESRB
