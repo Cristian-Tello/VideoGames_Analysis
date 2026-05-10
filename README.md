@@ -23,3 +23,12 @@ The dataset's rating column, which reflects the age classification assigned by t
 9. Critic_Score = maximum of 100	
 10. User_Score	= maximum of 10
 11. Rating = ESRB
+
+
+# Applied Libraries:
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy import stats
+```
