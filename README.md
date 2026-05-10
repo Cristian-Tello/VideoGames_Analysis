@@ -98,3 +98,7 @@ Technical Justification:
 
 Conclusion: Use the data from 2006 to 2016 to train your sales or release prediction model for 2017, ensuring that the variables reflect the most recent market conditions and the evolution of modern consoles.
 
+<p align="center">
+  <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Platform%20Sales%202006-2016.png" alt="Sample Image">
+</p> 
+ 
