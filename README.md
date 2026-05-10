@@ -10,7 +10,6 @@ The analysis is presented in a simulated context: December 2016, with the task o
 
 The dataset's rating column, which reflects the age classification assigned by the ESRB, adds an additional dimension to the study, allowing for an evaluation of how content restrictions can impact the acceptance and success of video games.
 
-
 ## Data
 1. Name	
 2. Platform	
@@ -23,7 +22,6 @@ The dataset's rating column, which reflects the age classification assigned by t
 9. Critic_Score = maximum of 100	
 10. User_Score	= maximum of 10
 11. Rating = ESRB
-
 
 # Applied Libraries:
 ```python
@@ -66,7 +64,7 @@ plt.show()
   <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Games%20Launch%20in%20differents%20years.png" alt="Sample Image">
 </p>
 
-## General Conclusion for Games Lauch in different years.
+# General Conclusion for Games Lauch in different years.
 
 The graph shows how the video game industry experienced sustained growth from the 1980s, reaching its peak between 2007 and 2009 with over 1,400 releases annually. 
 
@@ -76,7 +74,7 @@ This boom reflects market consolidation and platform expansion during that perio
   <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Platform%20Sales.png" alt="Sample Image">
 </p>
 
-## Platform sales Conclusion
+# Platform sales Conclusion
 
 The chart clearly shows the PlayStation 2 (PS2) leading the way as the top-selling platform, solidifying its status as a historical benchmark in the gaming industry. It is followed by the Xbox 360 and PlayStation 3, reflecting the intense competition between Sony and Microsoft during that generation. The performance of consoles like the Wii and Nintendo DS demonstrates Nintendo's ability to capture different market segments with innovative offerings. In contrast, platforms like the PSP and PC show lower figures, suggesting a more limited market or one with different consumption patterns. Overall, the visualization allows us to identify how each console impacted the market and how each company's strategies influenced the distribution of global sales.
 
@@ -140,5 +138,119 @@ The market shows a clear generational replacement cycle: older consoles are losi
   <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Sales%20by%20Genre.png" alt="Sample Image">
 </p> 
 
-# conclusion: 
-* The Action, Sports, and Shooter genres account for the majority of sales and are the most profitable, while genres such as Strategy, Puzzle, and Adventure show limited reach. This suggests that, for a predictive model or market strategy, it is advisable to prioritize leading genres while still considering that smaller genres can be valuable in specific niches.
+conclusion: The Action, Sports, and Shooter genres account for the majority of sales and are the most profitable, while genres such as Strategy, Puzzle, and Adventure show limited reach. This suggests that, for a predictive model or market strategy, it is advisable to prioritize leading genres while still considering that smaller genres can be valuable in specific niches.
+
+<p align="center">
+  <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/platform%20region.png" alt="Sample Image">
+</p>
+
+* Market Share Variations by Region
+1. North America: Xbox 360 leads, followed by PS2, Wii, and PS3. This reflects Microsoft's strong market penetration.
+
+2. Europe: PS2 and PS3 dominate, with Xbox 360 and Wii in secondary positions. Sony maintains a historical advantage in the region.
+
+3. Japan: Nintendo DS leads, followed by PS2 and PS3. Nintendo has a stronger cultural presence and local preference.
+
+ Conclusion: Each market has a different leader. Microsoft dominates in North America, Sony in Europe, and Nintendo in Japan, highlighting cultural and strategic differences within the industry.
+
+
+ * Impact by Region
+1. North America (NA): This region boasts the highest sales across nearly all ratings.
+- Games rated E (Everyone) and RP (Rating Pending) stand out, reflecting a broad, family-oriented market.
+- There is also a strong presence of M (Mature) titles, demonstrating that the adult audience is a significant segment.
+
+2. Europe (EU): This region maintains a similar pattern to North America, although with lower figures.
+- E and M games account for the majority of sales, indicating a balance between family and adult titles.
+
+3. Japan (JP): Sales are lower compared to NA and EU.
+- A preference for E and T (Teen) games is observed, suggesting a market more geared towards young and family audiences.
+- M titles have lower penetration than in the West.
+
+<p align="center">
+  <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/ESRB.png" alt="Sample Image">
+</p>
+
+* Conclusion
+- ESRB ratings do influence regional sales:
+- E and T are the most universal, with strong global acceptance.
+- The M genre carries significant weight in the West, especially in North America.
+- Japan shows less interest in games for adults, prioritizing family or youth-oriented experiences.
+
+```python
+# Hypothesis Testing
+
+# H0 = The average user ratings for the Xbox One and PC platforms are the same
+# H1 = The average user ratings for the Xbox One and PC platforms are NOT the same.
+
+xbox_one_scores = clean_data[clean_data['platform'] == 'XOne']['user_score'].dropna()
+pc_scores = clean_data[clean_data['platform'] == 'PC']['user_score'].dropna()
+
+
+# Significance level
+alpha = 0.05
+
+# T test value
+results = stats.ttest_ind(xbox_one_scores, pc_scores)
+print('P Value:', results.pvalue)
+
+if (results.pvalue < alpha):
+    print('We reject the null hypothesis')
+else:
+    print('We accept the null hypothesis')
+```
+```python
+Results:
+P Value: 0.0005833414469972193
+We reject the null hypothesis
+```
+In the hypothesis test, the result indicates that the p-value was less than the significance level (α = 0.05).
+conclusion: The null hypothesis (H0) is rejected, meaning there is statistically significant evidence to suggest that average user ratings on Xbox One and PC are different.
+In other words, the data suggests that users rate games differently on each platform, and this difference cannot be attributed to chance.
+
+```python
+# Hypothesis Testing
+
+# H0 = The average user ratings for the Action and Sports genres are different
+# H1 = The average user ratings for the Action and Sports genres are not different.
+
+action_genres = clean_data[clean_data['genre'] == 'Action']['user_score'].dropna()
+sports_genres= clean_data[clean_data['genre'] == 'Sports']['user_score'].dropna()
+
+
+# Significance level
+alpha = 0.05
+
+# T test value
+results = stats.ttest_ind(action_genres, sports_genres)
+print('P Value:', results.pvalue)
+
+if (results.pvalue < alpha):
+    print('We reject the null hypothesis')
+else:
+```
+```python
+Results:
+P Value: 1.1356758476860633e-08
+We reject the null hypothesis
+```
+* conclusion of the hypothesis test results: 
+
+The p-value obtained was much lower than the significance level (α = 0.05), therefore the null hypothesis is rejected. This means that there is statistically significant evidence to support the claim that the average ratings for the Action and Sports genres are different.
+
+In other words, users rate action games differently from sports games, and this difference cannot be attributed to chance.
+
+## General Conclusions:
+
+1.The analysis, set in a simulated December 2016 scenario to project sales for 2017, provides practical value by demonstrating how to work with real data and extract insights applicable to any period.
+
+2. The industry showed sustained growth since the 1980s, reaching its peak between 2007 and 2009, followed by a decline attributed to strategic changes and the transition to digital distribution.
+
+3. The PlayStation 2 established itself as the best-selling console, while the Xbox 360 and PS3 reflected the intense competition of their generation. Nintendo, with the Wii and DS, captured distinct segments with innovative offerings.
+
+4. To build a predictive model for 2017, the 2006–2016 period is the most representative, as it includes both the rise and fall of modern platforms, allowing for the identification of technological replacement patterns.
+
+5. The PS4, Xbox One, and 3DS consoles, along with the stability of the PC market, represent the potential for future growth, while platforms like the PS2, PSP, and Wii U are showing decline.
+
+6. In terms of genres, Action, Sports, and Shooter games account for the majority of sales and are the most profitable, while genres like Strategy, Puzzle, and Adventure have less reach, although they are useful in specific niches.
+
+  For a predictive model toward 2017, it is advisable to focus on emerging platforms (PS4, Xbox One, 3DS, PC) and the most profitable genres, ensuring that the variables reflect the most recent conditions and the evolution of the sector.
