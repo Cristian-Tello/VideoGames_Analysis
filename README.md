@@ -102,3 +102,26 @@ Conclusion: Use the data from 2006 to 2016 to train your sales or release predic
   <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Platform%20Sales%202006-2016.png" alt="Sample Image">
 </p> 
  
+* Xbox 360 (952.99), PlayStation 3 (931.33) and Wii (891.18) : These three consoles dominate the market, reflecting the intense competition of the 2006–2016 generation.
+
+* Platforms with Growth: PlayStation 4 (314.14): Although with lower cumulative sales than its predecessors, it shows an upward trend due to being more recent.
+
+* Nintendo 3DS (257.81): Good performance in the handheld segment, with sustained growth.
+
+* Xbox One (159.32): Expanding, although still far from the historical leaders.
+
+* Platforms in Decline or with Less Impact : PS2 (265.80) and PSP (238.63): Consoles that were very successful but are now declining.
+
+* Wii U (82.19) and PS Vita (53.81): Low performance, with difficulties in consolidating their position.
+
+* GameCube, Original Xbox, Dreamcast: Marginal sales, currently irrelevant.
+
+* Potentially Profitable Platforms
+PS4 and Xbox One: Modern consoles with room to grow.
+
+* 3DS and DS: Handheld segment with good acceptance.
+
+* PC (163.42): Although smaller in volume, it maintains stability and relevance due to its open ecosystem.
+
+Conclusion:
+The market shows a clear generational replacement cycle: older consoles are losing relevance while newer ones (PS4, XOne, 3DS) concentrate the growth potential. For a predictive model towards 2017, it is advisable to focus on these emerging platforms and on the stability of the PC as a complementary market.
