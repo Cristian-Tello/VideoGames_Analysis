@@ -65,6 +65,7 @@ plt.show()
 <p align="center">
   <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Games%20Launch%20in%20differents%20years.png" alt="Sample Image">
 </p>
+
 ## General Conclusion for Games Lauch in different years.
 
 The graph shows how the video game industry experienced sustained growth from the 1980s, reaching its peak between 2007 and 2009 with over 1,400 releases annually. 
@@ -74,3 +75,26 @@ This boom reflects market consolidation and platform expansion during that perio
 <p align="center">
   <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Platform%20Sales.png" alt="Sample Image">
 </p>
+
+## Platform sales Conclusion
+
+The chart clearly shows the PlayStation 2 (PS2) leading the way as the top-selling platform, solidifying its status as a historical benchmark in the gaming industry. It is followed by the Xbox 360 and PlayStation 3, reflecting the intense competition between Sony and Microsoft during that generation. The performance of consoles like the Wii and Nintendo DS demonstrates Nintendo's ability to capture different market segments with innovative offerings. In contrast, platforms like the PSP and PC show lower figures, suggesting a more limited market or one with different consumption patterns. Overall, the visualization allows us to identify how each console impacted the market and how each company's strategies influenced the distribution of global sales.
+
+```python
+clean_data[clean_data['platform'].isin(top10_platform)].groupby(['year_of_release', 'platform'])['total_sales'].sum().unstack(fill_value=0)
+```
+<p align="center">
+  <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Dataframe%20total%20sales%20by%20year%20on%20each%20platform.png" alt="Sample Image">
+</p> 
+
+# Determinate data to take desicions on model 2017
+
+The data should be taken from the most recent and representative period, that is, the years 2006 to 2016
+
+Technical Justification:
+* This range includes the most current platforms (PS3, PS4, X360, Wii, etc.), whose trends are relevant for projecting market behavior in 2017.
+* Years prior to 2006 reflect generations of now-obsolete consoles (PS2, GBA, original DS), so their dynamics do not provide useful information for predicting future sales.
+* The 2006–2016 period captures both the rise and decline of various platforms, allowing the model to learn patterns of growth and technological replacement.
+
+Conclusion: Use the data from 2006 to 2016 to train your sales or release prediction model for 2017, ensuring that the variables reflect the most recent market conditions and the evolution of modern consoles.
+
