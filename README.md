@@ -48,3 +48,20 @@ from scipy import stats
 * Duplicate values ​​and rows
 
 - Remove 3 columns (#16230, 659, 14244) because they are duplicate columns and do not contribute any value to the data.
+
+## Data Analysis
+```python
+# Counting games in different years
+games_launch_years = clean_data['year_of_release'].value_counts().sort_index()
+
+plt.figure(figsize=(12, 8))
+games_launch_years.plot(kind='bar', color='skyblue')
+plt.title('Games Launch in differents years', fontsize=20)
+plt.xlabel('Years', fontsize=16)
+plt.ylabel('Quantity Games', fontsize=16)
+plt.grid(axis='y', alpha=0.3)
+plt.show()
+```
+<p align="center">
+  <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Games%20Launch%20in%20differents%20years.png" alt="Sample Image">
+</p>
