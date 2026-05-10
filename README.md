@@ -139,3 +139,6 @@ The market shows a clear generational replacement cycle: older consoles are losi
 <p align="center">
   <img src="https://github.com/Cristian-Tello/VideoGames_Analysis/blob/main/Sales%20by%20Genre.png" alt="Sample Image">
 </p> 
+
+# conclusion: 
+* The Action, Sports, and Shooter genres account for the majority of sales and are the most profitable, while genres such as Strategy, Puzzle, and Adventure show limited reach. This suggests that, for a predictive model or market strategy, it is advisable to prioritize leading genres while still considering that smaller genres can be valuable in specific niches.
